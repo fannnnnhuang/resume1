@@ -1,0 +1,533 @@
+body{
+	font-family: Courier;
+	background-color: rgb(216,230,231);
+	color: gray;
+}
+h1.label{
+	background-color:rgb(166,167,146);
+	width: 150px;
+	-webkit-clip-path: polygon(0 0, 89% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 89% 0, 100% 100%, 0% 100%);
+	font-family: 微軟正黑體;
+}
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d( 0, 0,-3000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0,  0,5px);
+  }
+  75% {
+    transform: translate3d( 0,0, -10px);
+  }
+  90% {
+    transform: translate3d( 0, 0,25px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes UpDown {
+  0% {
+  	opacity: 1;
+    transform: translate3d( 0,15px, 0);
+  }
+  25% {
+    transform: translate3d( 0,25px, 0);
+  }
+  50% {
+    transform: translate3d( 0,-10px, 0);
+  }
+  100% {
+    transform: translate3d( 0,5px, 0);
+  }
+}
+@keyframes leftRight {
+  0% {
+  	opacity: 1;
+    transform: translate3d( 15px,0, 0);
+  }
+  25% {
+    transform: translate3d( 25px, 0,0);
+  }
+  50% {
+    transform: translate3d( -10px, 0,0);
+  }
+  100% {
+    transform: translate3d(5px, 0,0);
+  }
+}
+/*個人資訊資料開始*/
+div.information{
+	margin:0px auto;/*卡片置中*/
+	background-color:rgb(120,169,174);
+	color: rgb(225,227,230);
+	width:80%;
+	overflow: hidden;
+}
+img.me{
+	width: 70%;
+	padding: 45px;
+	animation: UpDown 1s infinite cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	overflow: hidden;
+}
+div.information_photo{
+	float: left;
+	overflow: hidden;
+	width: 30%;
+	border-right-style: dashed;
+}
+img.me:hover{
+	animation:none;
+}
+div.information_content{
+	padding: 25px;
+	overflow: auto;
+	animation: bounceInLeft 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+h1.myName{
+	color:#d8c374;
+	text-shadow: 3px 2px rgb(111,119,132),4px 3px gray;
+}
+h1.myName:hover{
+	color:white;
+	transition: 0.5s;
+}
+div.about_me_content{
+	background-color: #d5b172;
+	color:  rgb(101,96,54);
+	border-radius: 25px;
+	width: 300px;
+	padding-left:10px;
+}
+input.profile{
+	background-color:rgb(120,169,174);
+	color:  white;
+	border-radius: 25px;
+	width: 80px;
+	text-align: center;
+	padding: 10px;
+	border-style: solid;
+	border-color:  rgb(216,230,231); 
+	transition: 0.5s;
+}
+input.profile:hover{
+	background-color: #d5b172;
+	color:  #47361f;
+	border-color:  rgb(70,71,56);
+	-webkit-filter:drop-shadow(3px 3px gray); 
+}
+
+/*個人資訊資料結束*/
+/*專業技能開始*/
+div.skill{
+	margin:0px auto;/*卡片置中*/
+	background-color:rgb(111,119,132);
+	color: rgb(225,227,230);
+	width:80%;
+	overflow: auto;
+}
+div.professionals{
+	overflow: auto;
+	border-left-style: double;
+	padding-left: 50px;
+}
+div.pro{
+	padding: 10px;
+}
+div.programs{
+	width: 60%;
+	float: left;
+	padding: 20px;
+	overflow: auto;
+}
+div.program{
+	background-color: rgb(197,198,184);
+	text-align: right;
+	color: black;
+	border-style: solid;
+	border-color:rgb(197,198,184);
+	border-radius: 25px;
+	overflow: auto;
+}
+.bgc {
+	background-color:#ee8572;
+	border-radius: 25px;
+	animation: bounceInLeft 5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	transition: 0.5s;
+	overflow: auto;
+}
+.bgc:hover {
+	background-color:#d26451;
+}
+.C{
+	width: 80%;
+}
+.html{
+	width: 75%;
+}
+.java{
+	width: 90%;
+}
+.jsp{
+	width: 90%;
+}
+.python{
+	width: 50%;
+}
+.sass{
+	width: 35%;
+}
+.swift{
+	width: 40%;
+}
+
+.circle_process{
+    position: relative;
+    width:100px;
+    height : 100px;
+}
+.circle_process .wrapper{
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top:0;
+    overflow: hidden;
+}
+.circle_process .right{
+    right:0;
+}
+.circle_process .left{
+    left:0;
+}
+.circle_process .circle{
+    width: 60px;
+    height: 60px;
+    border:20px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    transform : rotate(-135deg);
+}
+.circle_process .rightcircle{
+    border-top:20px solid #f3c068;
+    border-right:20px solid #f3c068;
+    right:0;
+    -webkit-animation: circle_right 2s linear;
+    animation-fill-mode: both;
+}
+.circle_process .leftcircle{
+   	border-bottom:20px solid #f3c068;
+    border-left:20px solid #f3c068;
+    left:0;
+}
+ .css .leftcircle{
+    -webkit-animation: circle_left_css 2s linear;
+    animation-fill-mode: both;
+}
+ .cjsp .leftcircle{
+    -webkit-animation: circle_left_cjsp 2s linear;
+    animation-fill-mode: both;
+}
+ .ps .leftcircle{
+    -webkit-animation: circle_left_ps 2s linear;
+    animation-fill-mode: both;
+}
+ .word .leftcircle{
+    -webkit-animation: circle_left_word 2s linear;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes circle_right{
+	0%{
+    	-webkit-transform: rotate(-135deg);
+    }
+    50%,100%{
+        -webkit-transform: rotate(45deg);
+    }
+}
+@-webkit-keyframes circle_left_css{
+    0%,50%{
+        -webkit-transform: rotate(-135deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(-27deg);
+    }
+}
+@-webkit-keyframes circle_left_cjsp{
+    0%,50%{
+        -webkit-transform: rotate(-135deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(-9deg);
+    }
+}
+@-webkit-keyframes circle_left_ps{
+    0%,50%{
+        -webkit-transform: rotate(-135deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(9deg);
+    }
+}
+@-webkit-keyframes circle_left_word{
+    0%,50%{
+        -webkit-transform: rotate(-135deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(27deg);
+    }
+}
+/*專業技能結束*/
+/*個人簡歷開始*/
+div.experience{
+	margin:0px auto;/*卡片置中*/
+	background-color:rgb(197,198,184);
+	color: rgb(70,71,56);
+	width:80%;
+	overflow: auto;
+	height: 350px;
+}
+div.oll{
+	min-width: 1200px;
+}
+ol {
+	position: relative;
+	display: block;
+	margin: 80px;
+	height: 4px;
+	background: #a6a792;
+}
+ol::before,ol::after {
+	content: "";
+	position: absolute;
+	top: -8px;
+	display: block;
+	width: 0;
+	height: 0;
+  	border-radius: 10px;
+	border: 10px solid #908376;
+}
+ol::before {
+	left: -5px;
+}
+ol::after {
+	right: -10px;
+	border: 10px solid transparent;
+	border-right: 0;
+	border-left: 20px solid #908376;
+	border-radius: 3px;
+}
+li {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 150px;
+	font: bold 14px arial;
+  	height: 50px;
+  	transition: 0.5s;
+
+}
+li .diplome {
+	position: absolute;
+	top: -47px;
+	left: 30%;
+	color: #000000;
+}
+li .point {
+	content: "";
+	top: -4px;
+	left: 43%;
+	display: block;
+	width: 6px;
+	height: 6px;
+	border: 4px solid #908376;
+	border-radius: 10px;
+	background: #fff;
+	position: absolute;
+}
+li .description {
+	display: none;
+	background-color: #f4f4f4;
+	padding: 10px;
+	margin-top: 20px;
+	position: relative;
+	font-weight: normal;
+	z-index: 1;
+	border-radius: 25px;
+	font-family: 微軟正黑體;
+}
+.description::before {
+	content: '';
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #f4f4f4;
+	position: absolute;
+	top: -5px;
+	left: 43%;
+}
+li:hover {
+	cursor: pointer;
+  	color: rgb(70,71,56);
+}
+li:hover .description {
+  	display: block;
+}
+p.name,p.diplome{
+	text-align: center;
+}
+/*個人簡歷結束*/
+/*照片開始*/
+div.collection{
+	color: #4a3b07;
+	background-color: rgba(237,205,27,0.7);
+	overflow: auto;
+	width: 80%;
+	margin:0px auto;
+	opacity:0.9;
+	height: 500px;
+}
+img.collection{
+	width: 100%;
+	border-radius: 25px;
+	border-style: solid;
+	border-color: #95770e;
+	border-width: 4px;
+	overflow: auto;
+}
+div.img{
+	width: 30%;
+	float: left;
+	padding: 15px;
+}
+div.img:hover .picture_text{
+	animation: UpDown 2s infinite cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	display: block;
+	z-index: 100;
+	color: white;
+	overflow: auto;
+}
+div.picture_text{
+	position: relative;
+	top:-150px;
+	left: 4px;
+	display: none;
+	background-color: rgba(0,0,0,0.8);
+	text-align: center;
+	font-family: 微軟正黑體;
+	border-radius: 25px;
+}
+/*照片結束*/
+/*聯絡資訊開始*/
+div.contact{
+	color: gray;
+	background-color: white;
+	overflow: auto;
+	width: 80%;
+	margin:0px auto;
+	opacity:0.9;
+	text-align: center;
+}
+table.contact{
+	text-align: left;
+	border-radius: 10px;
+	color: #825d1c;
+	border-color: #d5b172; 
+	width: 50%;
+}
+.table{
+	border-radius: 5px;
+	color: #645130;
+}
+td{
+	padding: 5px;
+}
+input.submit,input.reset{
+	padding-top:8px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 8px;
+	margin: 10px;
+	background-color: #ffffff;
+	color: #694b16;
+	border-radius: 15px;
+	border-color: #d5b172;
+	transition: 0.5s;
+}
+input.submit:hover,input.reset:hover{
+	font-family: 微軟正黑體;
+	background-color: #d5b172;
+	color: white;
+	-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+	border-color:#866328;
+}
+img.footer:hover{
+	-webkit-filter:drop-shadow(5px 5px 5px gray);
+}
+img.footer{
+	width: 50px;
+}
+h1.title1{
+	color: rgb(120,169,174);
+	transition: 0.5s;
+}
+h1.title2{
+	color: #d5b172;
+	transition: 0.5s;
+}
+h1.title1:hover,h1.title2:hover{
+	-webkit-filter:drop-shadow(2px 1px gray);
+}
+h3.contact_text:hover{
+	color: rgb(87,140,147);
+}
+tr:hover{
+	color: #d5b172;
+}
+/*聯絡資訊結束*/
+div.sidebar{
+	position: fixed;
+	top: 150px;
+	right: -5px;
+}
+input.sidebar{
+	animation: bounceInRight 9s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	border-top-left-radius: 20px; 
+	border-bottom-left-radius: 20px;
+	padding: 15px;
+	background-color:rgb(210,211,201);
+	color:rgb(70,71,56); 
+	border-style: solid;
+	border-color: rgb(138,122,108);
+	font-family: 微軟正黑體;
+}
+input.sidebar:hover{
+	background-color:rgb(216,230,231);
+	color:#969696; 
+	border-color: #969696;
+	-webkit-filter:drop-shadow(5px 5px 5px gray);
+}
